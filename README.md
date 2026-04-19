@@ -1,76 +1,77 @@
-Reddit Stress and Sentiment Analysis
-Overview
+# Reddit Stress and Sentiment Analysis
 
+## Overview
 This project analyzes Reddit posts from stress-related and support-focused communities to explore patterns in sentiment, engagement, and text characteristics. Using Python, NLP techniques, and data visualization, the analysis focuses on how post content varies across subreddits and how engagement metrics like comments relate to social karma.
 
-Objectives
-Clean and prepare Reddit post data for analysis
-Measure sentiment in post text using VADER sentiment analysis
-Compare engagement and text trends across multiple subreddits
-Explore whether post activity, such as comment count, relates to karma
-Visualize linguistic and engagement patterns in stress-related communities.
-Tools Used
-Python
-Pandas
-NumPy
-Matplotlib
-NLTK
-scikit-learn
-WordCloud
-Dataset Features Used
+## Objectives
+- Clean and prepare Reddit post data for analysis  
+- Measure sentiment in post text using VADER sentiment analysis  
+- Compare engagement and text trends across multiple subreddits  
+- Explore relationships between comment volume and social karma  
+- Visualize linguistic and engagement patterns  
 
-The analysis used Reddit post fields including:
+## Tools & Technologies
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- NLTK (VADER Sentiment Analysis)  
+- scikit-learn  
+- WordCloud  
 
-subreddit
-text
-social timestamp
-social karma
-social number of comments
+## Dataset Features
+The dataset includes Reddit post data such as:
+- `subreddit`
+- `text`
+- `social_timestamp`
+- `social_karma`
+- `social_num_comments`
 
-Additional engineered features included:
+### Engineered Features
+- Word count per post  
+- Subreddit ID mapping  
+- Time-based features (hour, month, year)  
+- Sentiment score (`compound` from VADER)  
 
-word count
-subreddit ID mapping
-hour, month, and year from timestamps
-compound sentiment score
-Methodology
-Loaded and inspected the Reddit dataset
-Removed unnecessary columns and reduced the feature set
-Created new analytical features such as word count and timestamp-based variables
-Applied VADER sentiment analysis to calculate compound sentiment scores for each post
-Grouped and compared sentiment and engagement by subreddit
-Built a linear regression model to examine the relationship between number of comments and karma
-Visualized subreddit activity, word frequency, karma trends, and text patterns
-Key Analysis Performed
-Sentiment scoring of Reddit post text
-Average sentiment by subreddit
-Mean word count by subreddit
-Post count distribution across communities
-Word frequency analysis using tokenization and stopword removal
-Word cloud generation for common post terms
-Linear regression using comment count to predict karma
-Key Insights
-Different support-oriented subreddits showed measurable variation in text volume and engagement
-Sentiment analysis provided a way to quantify emotional tone across stress-related communities
-Comment volume showed some predictive relationship with social karma, though the model was simple and could be improved with additional features
-Text preprocessing and visualization helped identify common themes across posts
-Possible Improvements
-Add stronger text preprocessing, such as punctuation cleanup and lemmatization
-Use more predictive features for engagement modeling
-Compare multiple machine learning models instead of only linear regression
-Improve sentiment analysis by comparing VADER with transformer-based NLP methods
-Refine visualizations and package the notebook/script into a more reproducible pipeline
-How to Run
-Place Reddit.csv in the project directory
-Install dependencies:
-pandas
-numpy
-matplotlib
-nltk
-scikit-learn
-wordcloud
-Run the Python script
-Download required NLTK resources when prompted:
-punkt
-vader_lexicon
-stopwords
+## Methodology
+1. Loaded and explored Reddit dataset  
+2. Removed unnecessary columns to focus analysis  
+3. Created new features (word count, timestamps, subreddit IDs)  
+4. Applied VADER sentiment analysis to calculate compound sentiment scores  
+5. Aggregated sentiment and engagement by subreddit  
+6. Built a linear regression model to analyze relationships between comments and karma  
+7. Generated visualizations to explore patterns  
+
+## Analysis Performed
+- Sentiment scoring of Reddit posts  
+- Mean sentiment comparison across subreddits  
+- Average word count by subreddit  
+- Post frequency distribution  
+- Word frequency analysis using tokenization and stopword removal  
+- Word cloud generation  
+- Linear regression modeling of engagement metrics  
+
+## Key Insights
+- Different subreddits exhibit distinct patterns in sentiment and engagement  
+- Sentiment analysis provides measurable insights into emotional tone across communities  
+- Comment volume shows some relationship with social karma, though the model is relatively simple  
+- Text processing highlights common themes in stress-related discussions  
+
+## Visualizations
+- Bar charts for subreddit activity and average metrics  
+- Scatter plot for regression analysis  
+- Word frequency plots  
+- Word cloud for common terms  
+
+## Future Improvements
+- Apply advanced NLP techniques (lemmatization, embeddings, transformers)  
+- Improve regression model with additional features  
+- Compare multiple machine learning models  
+- Build a reproducible pipeline or notebook version  
+- Add interactive dashboards (Tableau or Plotly)  
+
+## How to Run
+1. Place `Reddit.csv` in the project directory  
+2. Install dependencies:
+   ```bash
+   pip install pandas numpy matplotlib nltk scikit-learn wordcloud

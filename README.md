@@ -8,7 +8,7 @@ Clean and prepare Reddit post data for analysis
 Measure sentiment in post text using VADER sentiment analysis
 Compare engagement and text trends across multiple subreddits
 Explore whether post activity, such as comment count, relates to karma
-Visualize linguistic and engagement patterns in stress-related communities
+Visualize linguistic and engagement patterns in stress-related communities.
 Tools Used
 Python
 Pandas
